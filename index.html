@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./form.css">
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Sample Registration form</h1>
+        <form name="registrationForm" id="registrationForm" method="GET">
+            <fieldset>
+                <legend>Registration form</legend>
+                <div class="form-wrapper">
+                    <!--first name -->
+                    <div class="input-wrapper">
+                        <label for="fname">First Name</label>
+                        <input data-required="required" data-exp="alpha" data-error="Please fill the name"
+                        data-errortwo="Please enter alphabets only" type="text" id="fname" name="fname" placeholder="first name" autofocus>
+                        <span class="error"></span>
+                    </div>
+                    <!-- last name -->
+                    <div class="input-wrapper">
+                        <label for="lname">Last Name</label>
+                        <input id="lname" type="text" name="lname" placeholder="last name" data-required="required" data-exp="alpha" data-error="Please fill the name"
+                        data-errortwo="Please enter alphabets only">
+                        <span class="error"></span>
+                    </div>
+                    <!-- phone -->
+                    <div class="input-wrapper">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="number" name="lname" placeholder="phone number" data-required="required" data-exp="phone" data-error="Please fill the phone number" data-length="10"
+                        data-errortwo="Please enter numbers only">
+                        <span class="error"></span>
+                    </div>
+                    <!-- email -->
+                    <div class="input-wrapper">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" name="email" placeholder="email">
+                        <span class="error"></span>
+                    </div>
+                    <!-- url -->
+                    <div class="input-wrapper">
+                        <label for="url">URL</label>
+                        <input id="url" name="url" type="url" name="url" placeholder="enter a url">
+                        <span class="error"></span>
+                    </div>
+                    <!-- gennder -->
+                    <div class="input-wrapper">
+                        <label for="gender">Gender</label>
+                        <input type="radio" data-noblock="no" name="gender" value="male"> Male
+                        <input type="radio" data-noblock="no" name="gender" value="female"> Female
+                        <input type="radio" data-noblock="no" name="gender" value="other"> Other
+                        <span class="error"></span>
+                    </div>
+                    <!-- intrest -->
+                    <div class="input-wrapper">
+                        <label>Intrest</label>
+                        <input type="text" list="intrest" name="intrest">
+                        <datalist id="intrest">
+                            <option value="Football">
+                                <option value="Hockey">
+                                    <option value="Cricket">
+                        </datalist>
+                        <span class="error"></span>
+                    </div>
+                    <!-- car -->
+                    <div class="input-wrapper">
+                        <label>Fav Car</label>
+                        <select>
+                            <optgroup label="Swedish Cars">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                            </optgroup>
+                            <optgroup label="German Cars">
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <!-- color -->
+                    <div class="input-wrapper">
+                        <label>Select your fav color</label>
+                        <input type="color" name="color" id="color">
+                        <span class="error"></span>
+                    </div>
+                    <!-- selct your birth date -->
+                    <div class="input-wrapper">
+                        <label>Birth day</label>
+                        <input type="date" name="date" id="date" min="1994-22-01">
+                        <span class="error"></span>
+                    </div>
+                    <!-- fav month -->
+                    <div class="input-wrapper">
+                        <label>Favourite Month</label>
+                        <input type="month" name="month">
+                        <span class="error"></span>
+                    </div>
+                    <!-- smartness -->
+                    <div class="input-wrapper">
+                        <label>Expret?</label>
+                        <input type="range" name="range" id="expert" min="1" max="100" value="10">
+                        <span class="error"></span>
+                        <output name="expertOut" for="expert" value="10"></output>
+                    </div>
+                    <!-- progress -->
+                    <div class="input-wrapper">
+                        <label for="completeness">Form Completeness</label>
+                        <progress value="1" id="completeness" max="100"></progress>
+                        <output name="progressBar" for="completeness" value="1"></output>
+                    </div>
+                    <!-- accept Terms -->
+                    <div class="input-wrapper">
+                        <label>Terms</label>
+                        <input type="checkbox" data-noblock="no" name="terms" value="accepted"> I agreee forever.
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <!-- submit -->
+                <div class="button-wrapper">
+                	<button type="submit" class="submit">Submit</button>
+                <!-- reset -->
+                <button type="reset" class="reset">Reset</button>
+                </div>
+                
+            </fieldset>
+        </form>
+        <div class="cards-container" id="root">
+        </div>
+    </main>
+    <script src="./validation.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
